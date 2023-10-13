@@ -10,6 +10,11 @@ body {
 
 .main-holder {
    width: inherit;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   padding: 120px 0 0 0;
 }
 
 .navbar {
@@ -21,7 +26,6 @@ body {
    justify-content: space-around;
    align-items: center;
    transition: 0.35s;
-   background-color: rgba(51, 51, 51, 1);
 }
 
 .navbar-after {
@@ -80,4 +84,25 @@ body {
    margin-left: -2px;
    background-color: #16d9e7;
    cursor: pointer;
+}
+
+/* Slide part */
+
+.slide-holder {
+   width: 70%;
+   margin: 0;
+   height: 300px;
+   overflow: hidden;
+}
+
+.slider {
+   width: 100%;
+   height: 100%;
+   display: flex;
+   transition: margin 0.3s;
+}
+
+.slide {
+   min-width: 100%;
+   height: 100%;
 }
