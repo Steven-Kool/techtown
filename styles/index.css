@@ -9,10 +9,6 @@ body {
    height: 100vh;
    padding: 0;
    margin: 0;
-   /* background-image: url('2.jpg');
-   background-position: top;
-   background-repeat: no-repeat;
-   background-size: cover; */
 }
 
 .main-holder {
@@ -68,16 +64,17 @@ body {
    list-style: none;
 }
 
-.link-holder li {
+.link-holder a {
+   text-decoration: none;
+   color: #f35ff8;
    font-size: 20px;
    font-weight: 500;
-   color: #f35ff8;
    font-family: 'Gabarito', sans-serif;
    margin: 0 10px;
    cursor: pointer;
    transition: color 0.35s;
 }
-.link-holder li:hover {
+.link-holder a:hover {
    color: rgb(255, 0, 0);
 }
 
@@ -157,6 +154,10 @@ body {
 
 .image-holder {
    width: 55%;
+   height: 100%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
 }
 
 /* footer */
