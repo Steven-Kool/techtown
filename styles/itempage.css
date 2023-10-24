@@ -185,13 +185,14 @@ body {
    display: flex;
    flex-direction: column;
    justify-content: center;
-   align-items: center;
+   align-content: stretch;
+   align-items: stretch;
    border: none;
    border-radius: 10px;
    box-sizing: border-box;
    margin: 20px;
-   padding: 10px;
-   min-width: 200px;
+   padding: 20px;
+   min-width: 250px;
    max-width: 300px;
    background-color: transparent;
    transition: 0.35s;
@@ -208,17 +209,27 @@ body {
 .item-holder .img-holder {
    position: relative;
    width: 100%;
+   min-height: 200px;
+   max-height: 250px;
    display: flex;
    justify-content: center;
    align-items: center;
    overflow: hidden;
+   margin: 0 0 20px 0;
 }
 
 .item-container {
    display: flex;
    justify-content: start;
-   align-items: start;
+   align-items: stretch;
    flex-wrap: wrap;
+}
+
+.right-item-part {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
 }
 
 .img-holder img {
@@ -244,17 +255,31 @@ body {
 }
 
 .product-detail {
-   font-size: 20px;
+   display: -webkit-box;
+   -webkit-box-orient: vertical;
+   -webkit-line-clamp: 2;
+   overflow: hidden;
+   text-overflow: ellipsis;
+   font-size: 18px;
    font-weight: 400;
-   color: rgb(58, 58, 58);
+   color: rgb(97, 97, 97);
    font-family: 'Roboto', sans-serif;
-   margin: 0 0 10px 0;
+   margin: 0 0 30px 0;
 }
 
 .product-price {
    font-size: 28px;
    font-weight: 600;
    color: purple;
+}
+
+/* Slide Holder */
+
+.slide-holder {
+   width: 80%;
+   margin: 20px auto;
+   background-color: red;
+   height: 200px;
 }
 
 /* Footer */

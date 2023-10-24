@@ -82,3 +82,47 @@ document.addEventListener('click', (event) => {
    }
 });
 
+// Data fetching from the json file and render it into the html
+
+fetch('data.json')
+   .then((response) => response.json())
+   .then((data) => {
+      const itemContainer = document.getElementById('itemContainer');
+      const rightItemContainer = document.getElementById('rightItemPart');
+
+      data.forEach((item) => {
+
+         if (pageTitle === "Laptop | Tech Town") {
+            const newItem = `
+            <div class="img-holder">
+               <img alt="item-image" src="${item.image}"/>
+            </div>
+
+            <div class="product-detail-holder">
+               <div class="product-brand">
+                  ${item.type_name}
+               </div>
+
+               <div class="product-detail">
+                  ${item.product_quote}
+               </div>
+
+               <div class="product-price">
+                  $ ${item.price}
+               </div>
+            </div>`;
+
+            const div = document.createElement('div');
+            div.classList.add('item-holder');
+            div.innerHTML = newItem;
+
+            itemContainer.appendChild(div);
+         };
+      });
+   })
+   .catch((error) => {
+      console.error("Error while Rendering the data: " + error)
+   });
+
+const itemHolder = document.getElementsByClassName('item-holder');
+
