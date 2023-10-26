@@ -18,16 +18,16 @@ const Navbar = `
       <ul>
          <li><a href="/template/index.html">Home</a></li>
          <li ${pageTitle === 'Android | Tech Town' ? 'style="padding-top: 10px; color: rgb(255, 0, 0)"' : ''}>
-            ${pageTitle === 'Android | Tech Town' ? 'Android' : '<a href="/template/android.html">Android</a>'}
+            ${pageTitle === 'Android | Tech Town' ? 'Android' : '<a href="android.html">Android</a>'}
          </li>
          <li ${pageTitle === 'Laptop | Tech Town' ? 'style="padding-top: 10px; color: rgb(255, 0, 0)"' : ''}>
-            ${pageTitle === 'Laptop | Tech Town' ? 'Laptop' : '<a href="/template/laptop.html">Laptop</a>'}
+            ${pageTitle === 'Laptop | Tech Town' ? 'Laptop' : '<a href="laptop.html">Laptop</a>'}
          </li>
          <li ${pageTitle === 'Gaming Set | Tech Town' ? 'style="padding-top: 10px; color: rgb(255, 0, 0)"' : ''}>
-            ${pageTitle === 'Gaming Set | Tech Town' ? 'Gaming Set' : '<a href="/template/gamingset.html">Gaming Set</a>'}
+            ${pageTitle === 'Gaming Set | Tech Town' ? 'Gaming Set' : '<a href="gamingset.html">Gaming Set</a>'}
          </li>
          <li ${pageTitle === 'Accessories | Tech Town' ? 'style="padding-top: 10px; color: rgb(255, 0, 0)"' : ''}>
-            ${pageTitle === 'Accessories | Tech Town' ? 'Accessories' : '<a href="/template/accessories.html">Accessories</a>'}
+            ${pageTitle === 'Accessories | Tech Town' ? 'Accessories' : '<a href="accessories.html">Accessories</a>'}
          </li>
       </ul>
    </div>
