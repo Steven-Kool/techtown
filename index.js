@@ -16,17 +16,17 @@ const Navbar = `
 
    <div class="link-holder">
       <ul>
-         <li><a href="/template/index.html">Home</a></li>
-         <li ${pageTitle === 'Android | Tech Town' ? 'style="padding-top: 10px; color: rgb(255, 0, 0)"' : ''}>
+         <li><a href="index.html">Home</a></li>
+         <li ${pageTitle === 'Android | Tech Town' ? 'style="padding-top: 10px; color: rgb(110, 110, 110)"' : ''}>
             ${pageTitle === 'Android | Tech Town' ? 'Android' : '<a href="android.html">Android</a>'}
          </li>
-         <li ${pageTitle === 'Laptop | Tech Town' ? 'style="padding-top: 10px; color: rgb(255, 0, 0)"' : ''}>
+         <li ${pageTitle === 'Laptop | Tech Town' ? 'style="padding-top: 10px; color: rgb(110, 110, 110)"' : ''}>
             ${pageTitle === 'Laptop | Tech Town' ? 'Laptop' : '<a href="laptop.html">Laptop</a>'}
          </li>
-         <li ${pageTitle === 'Gaming Set | Tech Town' ? 'style="padding-top: 10px; color: rgb(255, 0, 0)"' : ''}>
+         <li ${pageTitle === 'Gaming Set | Tech Town' ? 'style="padding-top: 10px; color: rgb(110, 110, 110)"' : ''}>
             ${pageTitle === 'Gaming Set | Tech Town' ? 'Gaming Set' : '<a href="gamingset.html">Gaming Set</a>'}
          </li>
-         <li ${pageTitle === 'Accessories | Tech Town' ? 'style="padding-top: 10px; color: rgb(255, 0, 0)"' : ''}>
+         <li ${pageTitle === 'Accessories | Tech Town' ? 'style="padding-top: 10px; color: rgb(110, 110, 110)"' : ''}>
             ${pageTitle === 'Accessories | Tech Town' ? 'Accessories' : '<a href="accessories.html">Accessories</a>'}
          </li>
       </ul>
@@ -90,7 +90,7 @@ fetch('data.json')
       const itemContainer = document.getElementById('itemContainer');
       const rightItemContainer = document.getElementById('rightItemPart');
 
-      data.forEach((item) => {
+      data.items.forEach((item) => {
 
          if (pageTitle === "Laptop | Tech Town") {
             const newItem = `
@@ -114,6 +114,7 @@ fetch('data.json')
 
             const div = document.createElement('div');
             div.classList.add('item-holder');
+            div.classList.add('hidden');
             div.innerHTML = newItem;
 
             itemContainer.appendChild(div);
@@ -125,4 +126,26 @@ fetch('data.json')
    });
 
 const itemHolder = document.getElementsByClassName('item-holder');
+
+// Slide part
+
+const mainSlide = document.getElementById('mainSlide');
+const slideMovers = document.querySelectorAll('.slide-move-btn-holder button');
+
+let currentSlide = 0;
+
+slideMovers.forEach(btn => {
+   btn.addEventListener('click', () => {
+      if (btn.id === "next" && currentSlide < 3) {
+         currentSlide += 1;
+      } else if (btn.id === "prev" && currentSlide > 0) {
+         currentSlide -= 1;
+      }
+
+      mainSlide.style.marginLeft = `-${currentSlide * 25}%`;
+   });
+});
+
+// Adding animation on entry
+
 
