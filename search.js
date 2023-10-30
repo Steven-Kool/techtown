@@ -1,5 +1,4 @@
 const Body = document.getElementById('body');
-const mainHolder = document.getElementById('mainHolder');
 
 const pageTitle = document.title;
 
@@ -17,17 +16,17 @@ const Navbar = `
    <div class="link-holder">
       <ul>
          <li><a href="index.html">Home</a></li>
-         <li ${pageTitle === 'Android' ? 'style="padding-top: 10px; color: rgb(110, 110, 110)"' : ''}>
-            ${pageTitle === 'Android' ? 'Android' : '<a href="android.html">Android</a>'}
+         <li ${pageTitle === 'Android | Tech Town' ? 'style="padding-top: 10px; color: rgb(110, 110, 110)"' : ''}>
+            ${pageTitle === 'Android | Tech Town' ? 'Android' : '<a href="android.html">Android</a>'}
          </li>
-         <li ${pageTitle === 'Laptop' ? 'style="padding-top: 10px; color: rgb(110, 110, 110)"' : ''}>
-            ${pageTitle === 'Laptop' ? 'Laptop' : '<a href="laptop.html">Laptop</a>'}
+         <li ${pageTitle === 'Laptop | Tech Town' ? 'style="padding-top: 10px; color: rgb(110, 110, 110)"' : ''}>
+            ${pageTitle === 'Laptop | Tech Town' ? 'Laptop' : '<a href="laptop.html">Laptop</a>'}
          </li>
-         <li ${pageTitle === 'GamingSet' ? 'style="padding-top: 10px; color: rgb(110, 110, 110)"' : ''}>
-            ${pageTitle === 'GamingSet' ? 'Gaming Set' : '<a href="gamingset.html">Gaming Set</a>'}
+         <li ${pageTitle === 'Gaming Set | Tech Town' ? 'style="padding-top: 10px; color: rgb(110, 110, 110)"' : ''}>
+            ${pageTitle === 'Gaming Set | Tech Town' ? 'Gaming Set' : '<a href="gamingset.html">Gaming Set</a>'}
          </li>
-         <li ${pageTitle === 'Accessories' ? 'style="padding-top: 10px; color: rgb(110, 110, 110)"' : ''}>
-            ${pageTitle === 'Accessories' ? 'Accessories' : '<a href="accessories.html">Accessories</a>'}
+         <li ${pageTitle === 'Accessories | Tech Town' ? 'style="padding-top: 10px; color: rgb(110, 110, 110)"' : ''}>
+            ${pageTitle === 'Accessories | Tech Town' ? 'Accessories' : '<a href="accessories.html">Accessories</a>'}
          </li>
       </ul>
    </div>
@@ -55,8 +54,6 @@ const navbar = document.getElementById("navbar");
 const lowerPart = document.getElementById("lowerPart");
 
 const navHeight = navbar.offsetHeight;
-
-// Making dropdown function
 
 let clicked = false;
 
@@ -105,29 +102,32 @@ const footer = `
 
 Body.insertAdjacentHTML('beforeend', footer);
 
-const floatFeedback = `
-<div class="float-feedback" onclick="feedbackClick()">
-   <img src="/images/feedback.png">
-</div>`;
+// Get data from the url
 
-if (pageTitle !== 'Feedback') {
-   Body.insertAdjacentHTML('beforeend', floatFeedback);
-}
+const url = new URLSearchParams(window.location.search);
 
-const feedbackClick = () => {
-   window.location.href = '/feedback.html';
-}
+const parameter = decodeURIComponent(url.get("q"));
 
-// Data fetching from the json file and render it into the html
+const filterValue = parameter.toUpperCase();
+
+const searchPara = document.getElementById('searchPara');
+
+searchPara.innerText = parameter;
 
 fetch('data.json')
    .then((response) => response.json())
    .then((data) => {
       const itemContainer = document.getElementById('itemContainer');
 
-      data.items.forEach((item) => {
+      let itemFound = false;
 
-         if (item.category === pageTitle.toLowerCase()) {
+      data.items.forEach((item) => {
+         // Check if product_name and type_name exist before converting to uppercase
+         const productName = item.product_name ? item.product_name.toUpperCase() : "";
+         const typeName = item.type_name ? item.type_name.toUpperCase() : "";
+
+         if (productName.includes(filterValue) || typeName.includes(filterValue)) {
+            console.log(item);
             const newItem = `
             <div class="img-holder">
                <img alt="item-image" src="${item.image}"/>
@@ -138,7 +138,7 @@ fetch('data.json')
                   ${item.product_name} (${item.type_name})
                </div>
 
-               <div class="product-detail">
+               <div class "product-detail">
                   ${item.product_quote}
                </div>
 
@@ -149,58 +149,22 @@ fetch('data.json')
 
             const div = document.createElement('div');
             div.classList.add('item-holder');
-            div.classList.add('hidden');
             div.innerHTML = newItem;
 
             itemContainer.appendChild(div);
 
-            div.addEventListener('mouseenter', () => {
-               div.style
-            })
-         };
+            itemFound = true;
+         }
       });
 
-      // Adding Popup Animation
+      if (!itemFound) {
+         const div = document.createElement('div');
+         div.classList.add('no-result-found');
+         div.innerText = 'No Result Found';
 
-      const itemHolder = document.querySelectorAll('.item-holder');
-
-      const observer = new IntersectionObserver((entries, observer) => {
-         entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-               const visibleHeight = entry.intersectionRatio * entry.target.clientHeight;
-               if (visibleHeight >= 0.5 * entry.target.clientHeight) {
-                  if (entry.target.classList.contains('hidden')) {
-                     entry.target.classList.remove('hidden');
-                     entry.target.classList.add('popup');
-                     observer.unobserve(entry.target);
-                  }
-               }
-            }
-         });
-      }, { threshold: 0.5 });
-
-      itemHolder.forEach((element) => observer.observe(element));
-
+         itemContainer.appendChild(div);
+      };
    })
    .catch((error) => {
-      console.error("Error while Rendering the data: " + error)
+      console.error("Error while Rendering the data:", error);
    });
-
-// Slide part
-
-const mainSlide = document.getElementById('mainSlide');
-const slideMovers = document.querySelectorAll('.slide-move-btn-holder button');
-
-let currentSlide = 0;
-
-slideMovers.forEach(btn => {
-   btn.addEventListener('click', () => {
-      if (btn.id === "next" && currentSlide < 3) {
-         currentSlide += 1;
-      } else if (btn.id === "prev" && currentSlide > 0) {
-         currentSlide -= 1;
-      }
-
-      mainSlide.style.marginLeft = `-${currentSlide * 25}%`;
-   });
-});

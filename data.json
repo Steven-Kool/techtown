@@ -6,133 +6,136 @@
          "product_name": "Dell",
          "type_name": "XPS",
          "product_quote": "Creators and Creativity",
-         "price": 599.00,
-         "image": "/images/dell1.jpg",
-         "display_image": "/images/dell1,1.jpg",
-         "product_detail_header": "XPS Laptops & 2-in-1 PCs",
-         "product_detail": "Power your passions with premium, precision-crafted laptops with innovative features"
+         "price": "599.00",
+         "image": "/images/dell1.jpg"
       }, {
          "id": 2,
          "category": "laptop",
          "product_name": "Dell",
          "type_name": "Latitude",
          "product_quote": "Business Performance and Collaboration",
-         "price": 459.00,
-         "image": "/images/dell2.jpg",
-         "display_image": "/images/dell2,2.jpg",
-         "product_detail_header": "Latitude Laptops & 2-in-1 PCs",
-         "product_detail": "Work becomes an experience wherever you are, on the world’s most intelligent PCs, featuring built-in AI"
+         "price": "459.00",
+         "image": "/images/dell2.jpg"
       }, {
          "id": 3,
          "category": "laptop",
          "product_name": "Dell",
          "type_name": "Inspiron",
          "product_quote": "Versatile Performance",
-         "price": 299.00,
-         "image": "/images/dell3.jpg",
-         "display_image": "/images/dell3,3.jpg",
-         "product_detail_header": "Inspiron Laptops & 2-in-1 PCs",
-         "product_detail": "Create, consume and connect in style with versatile laptops and 2-in-1s"
+         "price": "299.00",
+         "image": "/images/dell3.jpg"
       }, {
          "id": 4,
          "category": "laptop",
          "product_name": "Dell",
          "type_name": "Vostro",
          "product_quote": "Small Business Productivity",
-         "price": 549.00,
-         "image": "/images/dell4.jpg",
-         "display_image": "/images/dell4,4.jpg",
-         "product_detail_header": "Vostro Business Laptops",
-         "product_detail": "Power your small business with laptops built to deliver security, performance and enhanced video conferencing"
+         "price": "549.00",
+         "image": "/images/dell4.jpg"
       }, {
          "id": 5,
          "category": "laptop",
          "product_name": "Dell",
          "type_name": "Alienware",
          "product_quote": "Immersive Gaming Experiences",
-         "price": 1499.99,
-         "image": "/images/dell5.jpg",
-         "display_image": "/images/dell5,5.jpg",
-         "product_detail_header": "Alienware Gaming Laptops",
-         "product_detail": "Experience high-performance gaming with iconic designs and intelligently engineered laptops"
+         "price": "1,499.99",
+         "image": "/images/dell5.jpg"
       }, {
          "id": 6,
          "category": "laptop",
          "product_name": "Dell",
          "type_name": "Precision",
          "product_quote": "Advanced Users and Applications",
-         "price": 699.00,
-         "image": "/images/dell6.jpg",
-         "display_image": "/images/dell6,6.jpg",
-         "product_detail_header": "Precision Mobile Workstations",
-         "product_detail": "Take your ideas to the next level with the world’s #1 workstations; optimized for performance, reliability and user experience"
+         "price": "699.00",
+         "image": "/images/dell6.jpg"
       }, {
          "id": 7,
          "category": "laptop",
          "product_name": "Dell",
          "type_name": "G Series",
          "product_quote": "Gaming Performance",
-         "price": 799.99,
-         "image": "/images/dell7.jpg",
-         "display_image": "/images/dell7,7.jpg",
-         "product_detail_header": "G Series Gaming Laptops",
-         "product_detail": "Take your game to the next level with split-second responsiveness and dynamic gameplay"
+         "price": "799.99",
+         "image": "/images/dell7.jpg"
       }, {
          "id": 8,
          "category": "laptop",
          "product_name": "Dell",
          "type_name": "Chromebooks",
          "product_quote": "Cloud-native Versatility",
-         "price": 249.00,
-         "image": "/images/dell8.jpg",
-         "display_image": "/images/dell8,8.jpg",
-         "product_detail_header": "Chromebooks",
-         "product_detail": "Meet the needs of all levels of users with cloud-native security and all-day battery life—for the virtual learning environment all the way to enterprise business level"
+         "price": "249.00",
+         "image": "/images/dell8.jpg"
       }, {
          "id": 9,
          "category": "laptop",
          "product_name": "Lenovo",
          "type_name": "ThinkPad",
          "product_quote": "Trustworthy quality & enhanced security features for business",
-         "price": 1104.35,
-         "image": "/images/lenovo1.jpg",
-         "display_image": "/images/lenovo1,1.jpg",
-         "product_detail_header": "Relentless innovation",
-         "product_detail": "The way we compute. The way we do business. The way we live our lives. Every time business has gone somewhere new, discovered something different, or done something revolutionary, chances are, ThinkPad was there. We stem from a long tradition of firsts."
+         "price": "1104.35",
+         "image": "/images/lenovo1.jpg"
       }, {
          "id": 10,
          "category": "laptop",
          "product_name": "Lenovo",
          "type_name": "ThinkBook",
          "product_quote": "Power-packed, versatile, and ultraportable, these devices adapt to any work style",
-         "price": 749.50,
-         "image": "/images/lenovo2.jpg",
-         "display_image": "/images/lenovo2,2.jpg",
-         "product_detail_header": "Every day, elevated experiences",
-         "product_detail": "Lenovo ThinkBook Series laptops boost productivity. From their ergonomically designed keyboard positioning that alleviates body strain, to the stunning displays with low blue-light technology for eyecare, these business laptops deliver convenience and comfort. What’s more, they make you look good doing it—with gorgeous lightweight aluminum chassis that are sure to turn heads."
+         "price": "749.50",
+         "image": "/images/lenovo2.jpg"
       }, {
          "id": 11,
          "category": "laptop",
          "product_name": "Lenovo",
          "type_name": "Legion",
          "product_quote": "Game boldly with the latest tech & a signature style",
-         "price": 999.99,
-         "image": "/images/lenovo3.jpg",
-         "display_image": "/images/lenovo3,3.jpg",
-         "product_detail_header": "Style and savagery pushed to the limit",
-         "product_detail": "Everything, from the prowess you showcase—the foes you overcome—the teammates you inspire—the jaw-dropping things you create, leads directly to the incredible things you do in life. Lenovo Legion celebrates that and serves as an epic conduit to both words—the irrepressibly stylish and the indomitably savage."
+         "price": "999.99",
+         "image": "/images/lenovo3.jpg"
       }, {
          "id": 12,
          "category": "laptop",
          "product_name": "Lenovo",
          "type_name": "LOQ",
          "product_quote": "Expectation-shattering gaming laptops coming in at a budget price point",
-         "price": 829.99,
-         "image": "/images/lenovo4.jpg",
-         "display_image": "/images/lenovo4,4.jpg"
+         "price": "829.99",
+         "image": "/images/lenovo4.jpg"
       }, {
          "id": 13,
-         "category": "laptop"
+         "category": "laptop",
+         "product_name": "Lenovo",
+         "type_name": "YOGA",
+         "product_quote": "From laptop to tent mode, to stand mode or tablet mode. Quickly adapts to how you work, play, and relax",
+         "price": "2,000.00",
+         "image": "/images/lenovo5.jpg"
+      }, {
+         "id": 14,
+         "category": "laptop",
+         "product_name": "Lenovo",
+         "type_name": "IDEAPAD",
+         "product_quote": "Embracing function, responsiveness, style & fun",
+         "price": "379.00",
+         "image": "/images/lenovo6.jpg"
+      }, {
+         "id": 15,
+         "category": "laptop",
+         "product_name": "Lenovo",
+         "type_name": "Slim",
+         "product_quote": "Premium design, processing, visuals & sound to boost your ambitions",
+         "price": "369.99",
+         "image": "/images/lenovo7.jpg"
+      }, {
+         "id": 16,
+         "category": "laptop",
+         "product_name": "Acer",
+         "type_name": "Predator Triton 14",
+         "product_quote": "The slim, silver-hued Triton 14 with DLSS 3 is a thin gaming laptop forged with a purpose: to handle all your multitasking woes, dish out extreme performance, and empower your creativity at every turn",
+         "price": "1,499.99",
+         "image": "/images/acer1.jpg"
+      }, {
+         "id": 17,
+         "category": "laptop",
+         "product_name": "Acer",
+         "type_name": "Predator Triton 16",
+         "product_quote": "The slim, silver-hued Triton 16 with DLSS 3 is a thin gaming laptop forged with a purpose: to handle all your multitasking woes, dish out extreme performance, and empower your creativity at every turn",
+         "price": "1,799.99",
+         "image": "/images/acer2.jpg"
       }
    ]
 
